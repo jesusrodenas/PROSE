@@ -20,8 +20,8 @@ public class Ejemplo3 {
 		Contador cont = new Contador(100);
 		HiloIncrementador a = new HiloIncrementador("HiloA", cont);
 		HiloDecrementador b = new HiloDecrementador("HiloB", cont);
-		a .start();
-		b .start();
+		a.start();
+		b.start();
 
 	}
 

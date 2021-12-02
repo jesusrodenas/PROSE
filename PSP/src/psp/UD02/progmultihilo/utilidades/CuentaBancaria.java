@@ -22,7 +22,13 @@ public class CuentaBancaria {
 		saldo = saldo - cantidad;
 	}
 
-	public void retirarDinero(int cant, String nom) {
+	/**
+	 * Se hace necesario sincronizar el método para que la 
+	 * cuenta bancaria sólo sea usada por un hilo en cada momento.
+	 * @param cant
+	 * @param nom
+	 */
+	public synchronized void retirarDinero(int cant, String nom) {
 		if (getSaldo() >= cant) {
 			System.out.println("SE VA A RETIRAR SALDO (ACTUAL ES: " + getSaldo() + ")");
 			try {
