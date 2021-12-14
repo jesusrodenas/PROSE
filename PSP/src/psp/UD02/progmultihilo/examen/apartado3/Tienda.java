@@ -1,4 +1,4 @@
-package psp.UD02.progmultihilo.examen.apartado2;
+package psp.UD02.progmultihilo.examen.apartado3;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +11,13 @@ import java.util.List;
  *
  */
 
-/** CONTESTA AQU� A LA PREGUNTA PLANTEADA EN EL APARTADO 3
- * �Podr�as garantizar cu�l de los clientes entra primero al probador? �Por qu�?
- * 
+/** CONTESTA AQUÍ A LA PREGUNTA PLANTEADA EN EL APARTADO 3
+ * ¿Podrías garantizar cuál de los clientes entra primero al probador? ¿Por qué?
+ * Por las ejecuciones podría parecer que siempre Antonio es el primero en entrar al probador pero realmente no existe una garantía de
+ * que eso sea así. Lo que sucede es que en tan pocas istrucciones, lo normal es que el procesamiento de Antonio finalice icluso antes de
+ * que entre María. Si colocamos un sleep  antes del paso por probador del Thread tAntonio simulando una pérdida del micro, 
+ * veríamos cómo María entra antes que Antonio al probador. Una vez iniciados los tres hilos, no se puede garantizar cuál de ellos accederá al probador
+ * en primer lugar.
  *
  */
 
@@ -38,7 +42,7 @@ public class Tienda {
 		listaJuan.add("Bermudas");
 		
 		Runnable cAntonio = new Cliente("Antonio", listaAntonio, probador);
-		Runnable cMaria = new Cliente("Mar�a", listaMaria, probador);
+		Runnable cMaria = new Cliente("María", listaMaria, probador);
 		Runnable cJuan = new Cliente("Juan", listaJuan, probador);
 		
  		Thread tAntonio = new Thread(cAntonio);

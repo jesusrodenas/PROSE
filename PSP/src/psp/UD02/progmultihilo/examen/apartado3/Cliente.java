@@ -1,4 +1,4 @@
-package psp.UD02.progmultihilo.examen.apartado2;
+package psp.UD02.progmultihilo.examen.apartado3;
 import java.util.List;
 
 /**
@@ -65,10 +65,8 @@ public class Cliente implements Runnable {
 	
 	@Override
 	public void run() {
-		synchronized(probador) {
-			// TODO Auto-generated method stub
-			probador.pasoPorProbador(this);
-		}		
+		// TODO Auto-generated method stub
+		probador.pasoPorProbador(this);	
 	}
 	
 	

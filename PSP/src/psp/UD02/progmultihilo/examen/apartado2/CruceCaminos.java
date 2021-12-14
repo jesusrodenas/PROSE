@@ -1,4 +1,4 @@
-package psp.UD02.progmultihilo.examen.apartado3;
+package psp.UD02.progmultihilo.examen.apartado2;
 /**
  * 
  */
@@ -21,6 +21,6 @@ public class CruceCaminos {
 		
 		c1.start();
 		c2.start();
-		c3.start();		
+		c3.start();
 	}
 }
