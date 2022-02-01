@@ -9,7 +9,7 @@ import psp.UD03.progcomred.utilidades.ClienteTuTiempo;
  * @author JESUS
  *
  */
-public class Ejercicio8 {
+public class Ejercicio9 {
 
 	/**
 	 * @param args
